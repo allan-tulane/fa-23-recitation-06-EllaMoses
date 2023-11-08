@@ -13,8 +13,7 @@ def fib_recursive(n, counts):
         return fib_recursive(n-1, counts) + fib_recursive(n-2, counts)
     
  
-def fib_top_down(n, fibs, counts):
-    counts[n] += 1
+def fib_top_down(n, fibs):
     if fibs[n] != -1: #fibs is initialized with all -1s so if the nth term of fibs is not -1 it has already been found
         return fibs[n] 
     elif n == 0: #base case, if n is 0, fib value is 0
@@ -22,15 +21,9 @@ def fib_top_down(n, fibs, counts):
     elif n == 1: #base case, if n is 1, fib value is 1
         fibs[n] = 1
     else: #recursive case: the nth term of the fibonacci sequence is equal to the sum of the previous two terms
-        fibs[n] = fib_top_down(n-1,fibs, counts) + fib_top_down(n-2,fibs, counts)
+        fibs[n] = fib_top_down(n-1,fibs) + fib_top_down(n-2,fibs)
     return fibs[n]
 
-n = 87
-counts = [0] * (n+1)
-fibs = [-1] * (n+1)
-fib_top_down(n, fibs, counts)
-print(counts)
-print(sum(counts))
 
 
 def fib_bottom_up(n):
