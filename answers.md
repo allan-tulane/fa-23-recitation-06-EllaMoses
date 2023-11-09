@@ -33,13 +33,13 @@ For a value n, counts has n+1 terms. counts[1:] is equal to the reverse fibonacc
 
 The maximum number of times that fib_top_down(i)will be called for any value i is 2. 
 
-W(n) = O(n)
+W(n) = O(n),
 S(n) = O(n)
 
 
 - **8)**
 
-Maximum number of times that Fi will be read is 2 because it will be read when n = i + 1 and n  i - 1. 
+Maximum number of times that Fi will be read is 2 because it will be read when n = i + 1 and n = i - 1. 
 
-W(n) = O(n)
+W(n) = O(n), 
 S(n) = O(n)
